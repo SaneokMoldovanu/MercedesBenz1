@@ -1,0 +1,500 @@
+```html
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mercedes-Benz | Eleganță și Performanță</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background:#111;
+            color:white;
+            line-height:1.6;
+        }
+
+        html{
+            scroll-behavior:smooth;
+        }
+
+        /* HEADER */
+
+        header{
+            background:url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1600&auto=format&fit=crop') center/cover;
+            height:100vh;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            padding:20px;
+        }
+
+        header h1{
+            font-size:4rem;
+            background:rgba(0,0,0,0.6);
+            padding:20px;
+            border-radius:15px;
+        }
+
+        header p{
+            margin-top:20px;
+            font-size:1.3rem;
+            background:rgba(0,0,0,0.6);
+            padding:15px;
+            border-radius:10px;
+            max-width:700px;
+        }
+
+        .btn{
+            margin-top:25px;
+            padding:12px 25px;
+            background:silver;
+            color:black;
+            text-decoration:none;
+            font-weight:bold;
+            border-radius:8px;
+            transition:0.3s;
+        }
+
+        .btn:hover{
+            background:white;
+            transform:scale(1.05);
+        }
+
+        /* NAVIGATION */
+
+        nav{
+            background:black;
+            position:sticky;
+            top:0;
+            z-index:1000;
+        }
+
+        nav ul{
+            display:flex;
+            justify-content:center;
+            list-style:none;
+            flex-wrap:wrap;
+        }
+
+        nav ul li{
+            margin:15px;
+        }
+
+        nav ul li a{
+            color:white;
+            text-decoration:none;
+            font-weight:bold;
+            transition:0.3s;
+        }
+
+        nav ul li a:hover{
+            color:silver;
+        }
+
+        /* SECTIONS */
+
+        section{
+            padding:70px 10%;
+        }
+
+        h2{
+            text-align:center;
+            color:silver;
+            margin-bottom:40px;
+            font-size:2.5rem;
+        }
+
+        .text-center{
+            text-align:center;
+            max-width:1000px;
+            margin:auto;
+        }
+
+        /* MODELS */
+
+        .cards{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:25px;
+        }
+
+        .card{
+            background:#1e1e1e;
+            border-radius:15px;
+            overflow:hidden;
+            transition:0.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-10px);
+        }
+
+        .card img{
+            width:100%;
+            height:220px;
+            object-fit:cover;
+        }
+
+        .card-content{
+            padding:20px;
+        }
+
+        .card-content h3{
+            margin-bottom:10px;
+            color:silver;
+        }
+
+        /* GALLERY */
+
+        .gallery{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+            gap:20px;
+        }
+
+        .gallery img{
+            width:100%;
+            border-radius:15px;
+            transition:0.3s;
+        }
+
+        .gallery img:hover{
+            transform:scale(1.03);
+        }
+
+        /* TABLE */
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            margin-top:30px;
+        }
+
+        table, th, td{
+            border:1px solid #444;
+        }
+
+        th{
+            background:silver;
+            color:black;
+        }
+
+        th, td{
+            padding:15px;
+            text-align:center;
+        }
+
+        tr:nth-child(even){
+            background:#1a1a1a;
+        }
+
+        /* VIDEO */
+
+        .video-container{
+            display:flex;
+            justify-content:center;
+            margin-top:30px;
+        }
+
+        iframe{
+            width:90%;
+            max-width:900px;
+            height:500px;
+            border:none;
+            border-radius:15px;
+        }
+
+        /* FOOTER */
+
+        footer{
+            background:black;
+            text-align:center;
+            padding:25px;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:768px){
+
+            header h1{
+                font-size:2.5rem;
+            }
+
+            iframe{
+                height:250px;
+            }
+
+            nav ul{
+                flex-direction:column;
+                align-items:center;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h1>Mercedes-Benz</h1>
+
+        <p>
+            Mercedes-Benz reprezintă luxul, tehnologia și performanța germană.
+            Descoperă istoria, modelele celebre și inovațiile acestei mărci legendare.
+        </p>
+
+        <a href="#despre" class="btn">Explorează Website-ul</a>
+
+    </header>
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <ul>
+            <li><a href="#despre">Despre</a></li>
+            <li><a href="#istorie">Istorie</a></li>
+            <li><a href="#modele">Modele</a></li>
+            <li><a href="#galerie">Galerie</a></li>
+            <li><a href="#tehnologie">Tehnologie</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </nav>
+
+    <!-- ABOUT -->
+
+    <section id="despre">
+
+        <h2>Despre Mercedes-Benz</h2>
+
+        <div class="text-center">
+
+            <p>
+                Mercedes-Benz este una dintre cele mai apreciate mărci auto din lume.
+                Compania este cunoscută pentru automobilele sale premium, designul elegant
+                și sistemele moderne de siguranță.
+            </p>
+
+            <br>
+
+            <img 
+            src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?q=80&w=1400&auto=format&fit=crop" 
+            alt="Mercedes"
+            style="width:100%; max-width:900px; border-radius:15px; margin-top:25px;">
+
+        </div>
+
+    </section>
+
+    <!-- HISTORY -->
+
+    <section id="istorie">
+
+        <h2>Istoria Brandului</h2>
+
+        <div class="text-center">
+
+            <p>
+                Mercedes-Benz a fost fondată în Germania și are o istorie impresionantă
+                în industria auto. Karl Benz este considerat creatorul primului automobil modern.
+            </p>
+
+            <br>
+
+            <p>
+                De-a lungul anilor, compania a devenit un simbol al luxului și al tehnologiei.
+                Astăzi, Mercedes produce mașini sportive, SUV-uri și modele electrice moderne.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- MODELS -->
+
+    <section id="modele">
+
+        <h2>Modele Populare</h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?q=80&w=1200&auto=format&fit=crop" alt="G Class">
+
+                <div class="card-content">
+                    <h3>Mercedes G-Class</h3>
+                    <p>
+                        SUV puternic și elegant, renumit pentru performanța off-road.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200&auto=format&fit=crop" alt="C Class">
+
+                <div class="card-content">
+                    <h3>Mercedes C-Class</h3>
+                    <p>
+                        Sedan premium ideal pentru confort și eleganță urbană.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?q=80&w=1200&auto=format&fit=crop" alt="AMG GT">
+
+                <div class="card-content">
+                    <h3>Mercedes AMG GT</h3>
+                    <p>
+                        Mașină sport cu design agresiv și accelerație impresionantă.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- GALLERY -->
+
+    <section id="galerie">
+
+        <h2>Galerie Foto</h2>
+
+        <div class="gallery">
+
+            <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?q=80&w=1200&auto=format&fit=crop" alt="Mercedes luxury">
+
+            <img src="https://images.unsplash.com/photo-1489824904134-891ab64532f1?q=80&w=1200&auto=format&fit=crop" alt="Mercedes sport">
+
+            <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=1200&auto=format&fit=crop" alt="Mercedes car">
+
+            <img src="https://images.unsplash.com/photo-1493238792000-8113da705763?q=80&w=1200&auto=format&fit=crop" alt="Mercedes interior">
+
+        </div>
+
+    </section>
+
+    <!-- TECHNOLOGY -->
+
+    <section id="tehnologie">
+
+        <h2>Tehnologie și Inovație</h2>
+
+        <div class="text-center">
+
+            <p>
+                Mercedes-Benz investește constant în tehnologii moderne:
+            </p>
+
+            <br>
+
+            <table>
+
+                <tr>
+                    <th>Tehnologie</th>
+                    <th>Descriere</th>
+                </tr>
+
+                <tr>
+                    <td>MBUX</td>
+                    <td>Sistem inteligent multimedia și control vocal.</td>
+                </tr>
+
+                <tr>
+                    <td>Electric Drive</td>
+                    <td>Modele electrice moderne și eficiente.</td>
+                </tr>
+
+                <tr>
+                    <td>Safety Assist</td>
+                    <td>Sisteme avansate pentru siguranță rutieră.</td>
+                </tr>
+
+                <tr>
+                    <td>Autonomous Features</td>
+                    <td>Funcții inteligente pentru condus asistat.</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </section>
+
+    <!-- VIDEO -->
+
+    <section id="video">
+
+        <h2>Video Prezentare</h2>
+
+        <div class="video-container">
+
+            <iframe 
+            src="https://www.youtube.com/embed/6g0n2mXr9xk"
+            allowfullscreen>
+            </iframe>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+
+        <h2>Contact</h2>
+
+        <div class="text-center">
+
+            <p>
+                Pentru mai multe informații despre modelele Mercedes-Benz,
+                vizitează site-ul oficial.
+            </p>
+
+            <br>
+
+            <a href="https://www.mercedes-benz.com/" target="_blank" class="btn">
+                Site Oficial Mercedes-Benz
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            Realizat de: Numele Elevului | Proiect Școlar HTML & CSS | 2026
+        </p>
+
+    </footer>
+
+</body>
+</html>
+```
